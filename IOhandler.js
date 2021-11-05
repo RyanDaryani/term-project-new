@@ -23,6 +23,9 @@ const unzipper = require('unzipper'),
  */
 const unzip = (pathIn, pathOut) => {
 
+  fs.createReadStream(pathIn)
+  .pipe(unzipper.Extract({ path: pathOut}));
+
 };
 
 /**
@@ -32,6 +35,13 @@ const unzip = (pathIn, pathOut) => {
  * @return {promise}
  */
 const readDir = dir => {
+
+  var filename;
+  for (let i of dir) {
+  path.basename(i);
+  console.log(i);
+  }
+
 
 };
 

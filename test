@@ -1,0 +1,30 @@
+const unzipper = require('unzipper'),
+  fs = require("fs"),
+  PNG = require('pngjs').PNG,
+  path = require('path');
+
+zipFilePath = `${__dirname}/myfile.zip`;
+pathUnzipped = `${__dirname}/unzipped`;
+pathProcessed = `${__dirname}/grayscaled`;
+
+
+console.log(pathUnzipped);
+
+
+const readDir = dir => {
+
+    var directories = path.dirname(dir);
+    return directories;
+
+
+  
+  };
+
+  let i;
+
+  for(i of pathUnzipped) {
+    console.log((i));
+  }
+
+  console.log(readDir(pathUnzipped));
+

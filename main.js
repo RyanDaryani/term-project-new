@@ -8,9 +8,17 @@
  * 
  */
 
-const IOhandler = require("./IOhandler"),
-  zipFilePath = `${__dirname}/myfile.zip`,
-  pathUnzipped = `${__dirname}/unzipped`,
-  pathProcessed = `${__dirname}/grayscaled`;
+
+
+var unzip = require("./IOhandler").unzip;
+var readDir = require("./IOhandler").readDir;
+
+zipFilePath = `${__dirname}/myfile.zip`;
+pathUnzipped = `${__dirname}/unzipped`;
+pathProcessed = `${__dirname}/grayscaled`;
+
+unzip(zipFilePath,pathUnzipped);
+
+readDir(pathUnzipped);
 
 

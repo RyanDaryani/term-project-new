@@ -1,0 +1,14 @@
+unZip function:
+
+    get the  file 
+        if the file is a zip
+            extract that zip file
+            put the zip file in a directory called unzipped
+            print "Extraction complete" 
+        if not
+            error
+        
+readDir function:
+
+        take the unzipped directory
+        give back an array of file paths for all the png files
