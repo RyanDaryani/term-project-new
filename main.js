@@ -12,6 +12,7 @@
 
 var unzip = require("./IOhandler").unzip;
 var readDir = require("./IOhandler").readDir;
+var grayScale = require("./IOhandler").grayScale;
 
 zipFilePath = `${__dirname}/myfile.zip`;
 pathUnzipped = `${__dirname}/unzipped`;
@@ -21,4 +22,7 @@ unzip(zipFilePath,pathUnzipped);
 
 readDir(pathUnzipped);
 
+setTimeout(()=>{
+    grayScale(pathUnzipped,pathProcessed);
+},1000);
 
